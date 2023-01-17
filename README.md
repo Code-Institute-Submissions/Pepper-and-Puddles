@@ -1,7 +1,7 @@
 # Pepper and Puddles
 
 - This is a restaurant reservation web application using Python with Django, and a Postgres relational database.
--- The site has a model view controller to allow customers to make bookings following CRUD principles, and to give administrative access to the site owner only.
+- The site has a model view controller to allow customers to make bookings following CRUD principles, and to give administrative access to the site owner only.
 
 # Agile Development
 
