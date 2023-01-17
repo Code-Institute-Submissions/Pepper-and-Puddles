@@ -113,3 +113,19 @@ For our Restaurant Admin View we could have this page be entirely replaced with 
 
 4. Contact Us
 The last page should be details of the location of our premises, as well as any other contact details, address, email address, contact number, and social media links.
+
+### Example Sites
+
+- Calendar booking vs Email/Message request
+Below are examples of different approaches to take bookings by real-life restaurants. The first uses a popular booking service provider and has their unifrom set-up. The second is a less sophisticated system that allows the user to supply the restaurant with a message and contact details. The system of booking must be performed by the restaurant owner instead of being managed by the site.
+
+![calendar_booking](assets/readme_documentation/calendar_booking_example.jpg) ![message_booking](assets/readme_documentation/booking_page_example.jpg)
+
+### Wireframes
+
+- Homepage for mobile
+
+![Homepage_example_mobile](assets/readme_documentation/homepage_wireframe.jpg)
+- Dropdown menu for mobile
+
+![Dropdown_example-mobile](assets/readme_documentation/dropdown_wireframe.jpg)
