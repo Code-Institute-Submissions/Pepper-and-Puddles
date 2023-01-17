@@ -27,6 +27,12 @@ I want to be able to amend by booking if necessary
 - Identify Task Required:
 - Verify Completion:
 
+I want to see what food is on offer
+- Discuss: 
+- Define Acceptance:
+- Identify Task Required:
+- Verify Completion:
+
 ## B) Restaurant Owner Stories
 I want the site to be appealing and accessible to my customers
 - Discuss: 
@@ -46,6 +52,19 @@ I want to be able to contact booked customers
 - Identify Task Required:
 - Verify Completion:
 
+I want an attractive home page, that lures the customer in
+- Discuss: 
+- Define Acceptance:
+- Identify Task Required:
+- Verify Completion:
+
+I want to showcase the food that we offer and highlight positive reviews
+- Discuss: 
+- Define Acceptance:
+- Identify Task Required:
+- Verify Completion:
+
+
 ## C) Developer Stories
 I want to avoid any possibility of double bookings
 - Discuss: 
@@ -64,3 +83,16 @@ I want customers to be able to return to the site and retrieve and amend their b
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
+
+I want a navigation bar so that a customer can easily access the funtionality they want.
+- Discuss: 
+- Define Acceptance:
+- Identify Task Required:
+- Verify Completion:
+
+I want to include social media links, contact information, and restaurant location for the customers
+- Discuss: 
+- Define Acceptance:
+- Identify Task Required:
+- Verify Completion:
+
