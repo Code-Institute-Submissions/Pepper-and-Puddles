@@ -10,56 +10,56 @@
 
 ## A) Customer Stories
 I want to be able to book a table a specific time and party size
-- Discuss: 
+- Discuss: The user needs to make a booking tailored to their requirements, they need to be able to relay this information to the restaurant
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want to have my booking confirmed
-- Discuss: 
+- Discuss: The user needs to receive feedback to confirm that their data manipulation was successful, they may also need secondary feedback that the booking has been seen and confirmed by the restaurant, not just that the website behaved correctly.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want to be able to amend by booking if necessary
-- Discuss: 
+- Discuss: Bookings often need to be altered or cancelled, it would be helpful if the user had a way of retrieving their own booking entry and making the changes they need. Though the parameters of the changes should be confined to the restaurants current availability, rather than that of when the booking was originally made.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want to see what food is on offer
-- Discuss: 
+- Discuss: Users need to see if the food being offered is what they're looking for, to see if it will cater to the needs of their party, and assess if the price is appropriate.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 ## B) Restaurant Owner Stories
 I want the site to be appealing and accessible to my customers
-- Discuss: 
+- Discuss: Hospitality is a competitive business, businesses want to be able to stand out from the competition. A lot of users are familiar with competitors sites, our one should be just as good as any other if not better.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
-I want to booking details to be clear
-- Discuss: 
+I want the booking details to be clear
+- Discuss: Making a booking is the equivilant of making a sale. It should not be a frustrating or difficult process. It needs to be simple, secure, and reliable.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want to be able to contact booked customers
-- Discuss: 
+- Discuss: The restaurant may need to be able to contact someone in relation to a booking for numerous reasons. Bookings should require an email or phone number be provided.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want an attractive home page, that lures the customer in
-- Discuss: 
+- Discuss: The homepage will be the first thing a customer sees. It should reflect the nature of the business, and look inviting, striking, and provide clear direction towards the sections the user may have come to visit for.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want to showcase the food that we offer and highlight positive reviews
-- Discuss: 
+- Discuss: It is important that the customer can see that we provide delicious food, so that they can trust us to deliver when they arrive for their booking. Testimonails from regular patrons, and photos of the restaurant and the food can help showcase that our standards are authentic.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
@@ -67,31 +67,31 @@ I want to showcase the food that we offer and highlight positive reviews
 
 ## C) Developer Stories
 I want to avoid any possibility of double bookings
-- Discuss: 
+- Discuss: The restaurant has limited space. We need to maximise the amount of bookings they can fit into different time slots, while avoiding over booking the venue. If a double booking were to occur it could damage the restaurants reputation, and relationship with a customer.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
-I want to keep the restaurants admin view private
-- Discuss: 
+I want to keep the restaurant's admin view private
+- Discuss: The booking management system should only be accessible to the business. Users should only be able to manipulate their own bookings, they should not be able to see any information about other patrons bookings. All the information should be clearly displayed to the restaurant owner.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want customers to be able to return to the site and retrieve and amend their booking details
-- Discuss: 
+- Discuss: Customers might be able to call on their specific booking on our site by using a booking reference number that we provide them on confirmation of their initial booking. They should be able to request different time slots, party-sizes, or even cancel their booking. Alteration should require confirmation from the restaurant owner and return that feedback to the customer. Cancellations should be prominently notified to the restaurant owner.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
 I want a navigation bar so that a customer can easily access the funtionality they want.
-- Discuss: 
+- Discuss: The customer needs to know how to use our site as soon as the arrive on the homepage.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
 
-I want to include social media links, contact information, and restaurant location for the customers
-- Discuss: 
+I want to include social media links, contact information, and restaurant location to the customers
+- Discuss: Using a google maps widget could help customers with directions to the restaurant, social media could expand on page 2s purpose of providing photos and affirmation of product.
 - Define Acceptance:
 - Identify Task Required:
 - Verify Completion:
