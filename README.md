@@ -134,3 +134,8 @@ Below are examples of different approaches to take bookings by real-life restaur
 
 Bootstrap
 - Dropdown Menu
+
+# Testing
+
+- Created booking app, tested functionality by using command line "python3 manage.py runserver".
+H1 html text showing in server. App set up successfully.
