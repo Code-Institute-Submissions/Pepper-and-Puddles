@@ -10,7 +10,8 @@ def get_booking_page(request):
     return render(request, 'booking/booking.html',)
 
 
-# Function to make a reservation. If successful, user is brought to confirmation page.
+# Function to make a reservation. If successful, user is brought
+#  to confirmation page.
 
 
 def make_reservation(request, table_id):
@@ -21,10 +22,13 @@ def make_reservation(request, table_id):
         name = request.POST.get('name')
         phone = request.POST.get('phone')
         email = request.POST.get('email')
-        reservation = Reservation(table=table, date=date, time=time, name=name, phone=phone, email=email)
+        reservation = Reservation(table=table, date=date, time=time,
+                                  name=name, phone=phone, email=email)
         reservation.save()
         table.available = False
         table.save()
-        return render(request, 'reservation_confirmation.html', {'reservation': reservation})
+        return render(request, 'booking/reservation_confirmation.html',
+                      {'reservation': reservation})
     else:
-        return render(request, 'make_reservation.html', {'table': table})
+        return render(request, 'booking/make_reservation.html',
+                      {'table': table})
