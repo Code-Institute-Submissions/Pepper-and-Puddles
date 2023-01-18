@@ -139,3 +139,5 @@ Bootstrap
 
 - Created booking app, tested functionality by using command line "python3 manage.py runserver".
 H1 html text showing in server. App set up successfully.
+
+- Created Admin by usering createsuperuser command line, verified by signing in following url admin path on open server"
