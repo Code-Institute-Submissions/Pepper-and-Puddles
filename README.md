@@ -132,4 +132,5 @@ Below are examples of different approaches to take bookings by real-life restaur
 
 # Credits
 
-MDB Bootstrap for Hamburger dropdown menu
+Bootstrap
+- Dropdown Menu
