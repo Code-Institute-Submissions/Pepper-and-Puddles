@@ -23,4 +23,5 @@ urlpatterns = [
     path('reservations/', make_reservation, name='Reservations'),
     path('menus/', view_menu, name='Menus'),
     path('contact/', contact_us, name='Contact'),
+    path('', index, name='Home'),
 ]
