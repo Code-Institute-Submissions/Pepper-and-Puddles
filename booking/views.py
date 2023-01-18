@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Restaurant, Table, Reservation
 
 # Create your views here.
 
