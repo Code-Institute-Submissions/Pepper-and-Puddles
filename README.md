@@ -6,7 +6,11 @@
 # Agile Development
 
 - This project follow Agile principles and methodologies through assessing the Clear Value Proposition of User Stories
--- These User Stories are considered in 5 steps. Stories are articulated, discussed, the acceptable solution is defined, the necessary task required is identified, and finally completion is verified.
+- These User Stories are considered in 5 steps. Stories are articulated, discussed, the acceptable solution is defined, the necessary task required is identified, and finally completion is verified.
+
+- Making the Reservation functionality
+- I have created a function that requests date, time, name, phone, and, email from the user.
+- On a successful submission, the user should be brought to a confirmation.html page.
 
 ## A) Customer Stories
 I want to be able to book a table a specific time and party size
