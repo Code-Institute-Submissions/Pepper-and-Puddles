@@ -8,7 +8,7 @@ class Table(models.Model):
     available = models.BooleanField(default=True)
 
 
-class Reservation(models.Model):
+class Booking(models.Model):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
