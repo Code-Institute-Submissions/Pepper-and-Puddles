@@ -3,13 +3,10 @@ from django.db import models
 # Create your models here.
 
 
-class Table(models.Model):
-    capacity = models.IntegerField()
-    available = models.BooleanField(default=True)
-
-
 class Booking(models.Model):
-    table = models.ForeignKey(Table, on_delete=models.CASCADE)
+    party_size = models.IntegerField()
+    min_party_size = models.IntegerField()
+    max_party_size = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
     name = models.CharField(max_length=30, null=False, blank=False)

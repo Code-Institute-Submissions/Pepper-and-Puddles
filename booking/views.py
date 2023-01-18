@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Table, Booking
+from .models import Booking
 
 # Create your views here.
 
@@ -27,19 +27,26 @@ def view_menu(request):
 
 def make_booking(request):
     if request.method == 'POST':
-        date = request.POST.get('date')
-        time = request.POST.get('time')
-        name = request.POST.get('name')
-        phone = request.POST.get('phone')
-        email = request.POST.get('email')
-        booking = Booking(table=table, date=date, time=time,
-                          name=name, phone=phone, email=email)
-        booking.save()
-        table.available = False
-        table.save()
-        return render(request, 'booking/booking_confirmation.html',
-                      {'booking': booking})
+        # Get form data
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        date = request.POST['date']
+        time = request.POST['time']
+        party_size = request.POST['party_size']
+
+    # Create a new reservation object
+        reservation = Reservation(name=name, email=email, phone=phone,
+                                  date=date, time=time, party_size=party_size)
+
+    # Save the reservation to the database
+        reservation.save()
+
+    # Redirect to a confirmation page
+        return redirect('booking/booking_confirmation.html')
     else:
+
+        # Render the reservation form template
         return render(request, 'booking/bookings.html')
 
 
