@@ -11,6 +11,11 @@
 - Making the Reservation functionality
 - I have created a function that requests date, time, name, phone, and, email from the user.
 - On a successful submission, the user should be brought to a confirmation.html page.
+- Missing positional argument of Table ID
+
+- Additional page is necessary, booking confirmation page added.
+
+- Moved all html files to templates within the booking app. Expect that the site should work from index onwards through the templates.
 
 ## A) Customer Stories
 I want to be able to book a table a specific time and party size

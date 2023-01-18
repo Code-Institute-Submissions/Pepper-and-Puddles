@@ -20,5 +20,5 @@ from booking.views import get_booking_page, make_reservation
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bookings/', get_booking_page, name='bookings'),
-    path('reserve/', make_reservation, name='make_reservation'),
+    path('reservations/', make_reservation, name='Reservations'),
 ]
