@@ -55,3 +55,11 @@ def make_booking(request):
 
 def contact_us(request):
     return render(request, 'contact.html')
+
+
+def show_bookings(request):
+    bookings = Item.objects.all()
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'show_bookings.html', context)
