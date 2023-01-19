@@ -14,10 +14,13 @@
 - Missing positional argument of Table ID, perhaps Table ID not yet defined, could work later, removed for now temporarily.
 
 - Additional page is necessary, booking confirmation page added.
+- Additional page, view_bookings, created.
+
 
 - Moved all html files to templates within the booking app. Expect that the site should work from index onwards through the templates.
 
 - Classes successfuly appear in admin panel
+- Two objects have been created in the admin panel for classes of bookings, and have been successfully rendered in a template view.
 
 ## A) Customer Stories
 I want to be able to book a table a specific time and party size
