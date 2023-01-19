@@ -54,7 +54,7 @@ def make_booking(request):
 
 
 def contact_us(request):
-    return render(request, 'contact.html')
+    return render(request, 'booking/contact.html')
 
 
 def show_bookings(request):
