@@ -28,11 +28,14 @@ def view_menu(request):
 def make_booking(request):
     if request.method == 'POST':
         # Get form data
+        form = BookingForm(request.POST)
+        if form_is_valid():
+            form.save()
+            return redirect('booking/')
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
         date = request.POST['date']
-        time = request.POST['time']
         party_size = request.POST['party_size']
 
     # Create a new reservation object
