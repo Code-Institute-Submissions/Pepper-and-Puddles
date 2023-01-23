@@ -24,5 +24,5 @@ urlpatterns = [
     path('menus/', view_menu, name='Menus'),
     path('contact/', contact_us, name='Contact'),
     path('', index, name='Home'),
-    path('show_bookings/', show_bookings, name='Confirmed Bookings')
+    path('show_bookings/', show_bookings, name='Confirmed_Bookings')
 ]

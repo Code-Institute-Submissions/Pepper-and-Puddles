@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Booking
 from .forms import BookingForm
 # Create your views here.
@@ -23,9 +23,9 @@ def view_menu(request):
 def make_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
-        if form_is_valid():
+        if form.is_valid():
             form.save()
-            return redirect('/show_bookings')
+            return redirect('Confirmed_Bookings')
     form = BookingForm()
     context = {
         'form': form
