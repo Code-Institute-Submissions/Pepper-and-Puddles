@@ -1,13 +1,14 @@
 from django.db import models
-from guest_no_validation import Valid_Guest_Amount
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 # Create your models here.
 
 
-class Booking(models.Model, guests):
+class Booking(models.Model):
     date = models.DateField()
     time = models.TimeField()
-    guests = models.IntegerField("Please tell us how many"
-                                 " guests are in your party.")
+    guests = models.PositiveIntegerField(validators=[MinValueValidator(1),
+                                                     MaxValueValidator(16)])
     name = models.CharField(max_length=30, blank=False)
     phone = models.CharField(max_length=15, blank=False)
     email = models.EmailField()

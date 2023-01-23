@@ -38,6 +38,17 @@
     </div>
     <header>
 <h1>This is the bookings page</h1>
+    <div>
+        <form method="POST" action="book">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <p>
+                    <button type="submit">Check available times</button>
+                </p>
+            </div>
+        </form>
+    </div>
     </header>
     <footer>
         <div class="footer">
