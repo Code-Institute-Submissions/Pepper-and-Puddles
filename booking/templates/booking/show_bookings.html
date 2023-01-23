@@ -15,8 +15,16 @@
 <body>
     <header>
 <h1>This is the bookings page</h1>
-{{bookings}}
     </header>
+    <h2>Completed Bookings</h2>
+    <table>
+        {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.name }}</td>
+                <td>{{ booking.date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
     <footer>
         <div class="footer">
             <div>

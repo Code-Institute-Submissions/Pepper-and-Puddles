@@ -25,7 +25,7 @@ def make_booking(request):
         form = BookingForm(request.POST)
         if form_is_valid():
             form.save()
-            return redirect('/menus')
+            return redirect('/show_bookings')
     form = BookingForm()
     context = {
         'form': form
@@ -38,6 +38,8 @@ def make_booking(request):
 
 def contact_us(request):
     return render(request, 'booking/contact.html')
+
+# Booking log
 
 
 def show_bookings(request):

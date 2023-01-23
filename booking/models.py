@@ -12,6 +12,7 @@ class Booking(models.Model):
     name = models.CharField(max_length=30, blank=False)
     phone = models.CharField(max_length=15, blank=False)
     email = models.EmailField()
+# Make bookings objects list by name variable
 
     def __str__(self):
         return self.name

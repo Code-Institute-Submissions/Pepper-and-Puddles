@@ -155,3 +155,5 @@ Bootstrap
 H1 html text showing in server. App set up successfully.
 
 - Created Admin by usering createsuperuser command line, verified by signing in following url admin path on open server"
+
+- Form will not create onject for booking.
