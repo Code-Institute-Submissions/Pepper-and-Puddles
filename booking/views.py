@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 # Create your views here.
@@ -32,6 +32,19 @@ def make_booking(request):
     }
     return render(request, 'booking/bookings.html', context)
 
+
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('Confirmed_Bookings')
+    form = BookingForm(instance=booking)
+    context = {
+        'form': form
+    }
+    return render(request, 'booking/edit_booking.html', context)
 
 # Contact
 
