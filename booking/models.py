@@ -6,13 +6,12 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Booking(models.Model):
     date = models.DateField()
-    time = models.TimeField()
     guests = models.PositiveIntegerField(validators=[MinValueValidator(1),
-                                                     MaxValueValidator(16)])
+                                                     MaxValueValidator(16)],
+                                         null=True)
     name = models.CharField(max_length=30, blank=False)
     phone = models.CharField(max_length=15, blank=False)
     email = models.EmailField()
-    message = models.CharField(max_length=300)
 
     def __str__(self):
         return self.name
