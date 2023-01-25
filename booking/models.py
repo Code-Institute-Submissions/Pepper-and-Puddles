@@ -5,13 +5,13 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Booking(models.Model):
+    name = models.CharField(max_length=30, blank=False)
+    phone = models.CharField(max_length=15, blank=False)
+    email = models.EmailField()
     date = models.DateTimeField()
     guests = models.PositiveIntegerField(validators=[MinValueValidator(1),
                                                      MaxValueValidator(16)],
                                          null=True)
-    name = models.CharField(max_length=30, blank=False)
-    phone = models.CharField(max_length=15, blank=False)
-    email = models.EmailField()
 # Make bookings objects list by name variable
 
     def __str__(self):
@@ -19,8 +19,12 @@ class Booking(models.Model):
 
 
 class Table(models.Model):
-    table_id = models.IntegerField()
-    capacity = models.IntegerField()
+    table_id = models.IntegerField(validators=[MinValueValidator(1),
+                                               MaxValueValidator(12)],
+                                   null=True, unique=True)
+    capacity = models.IntegerField(validators=[MinValueValidator(1),
+                                               MaxValueValidator(4)],
+                                   null=True)
     available = models.BooleanField(default=True)
 
 # Function to mark open table as booked,
