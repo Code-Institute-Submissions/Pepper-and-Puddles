@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Booking
-from .forms import BookingForm
+from .models import Booking, Confirmed_Bookings
+from .forms import BookingForm, BookingConfirmedForm
 
 # Create your views here.
 
@@ -19,7 +19,7 @@ def view_menu(request):
     return render(request, 'booking/menu.html')
 
 
-# Function to make a reservation.
+# Function to request a booking, before time is validated.
 
 def make_booking(request):
     if request.method == 'POST':
@@ -28,6 +28,19 @@ def make_booking(request):
             form.save()
             return redirect('Confirmed_Bookings')
     form = BookingForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'booking/bookings.html', context)
+
+
+def confirmed_bookings(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('Confirmed_Bookings')
+    form = BookingConfirmedForm()
     context = {
         'form': form
     }

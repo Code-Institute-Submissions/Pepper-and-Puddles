@@ -35,7 +35,7 @@ class Table(model.Model):
             return False
 
 
-class Confirmed_Booking(model.Models):
+class Confirmed_Bookings(model.Models):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
@@ -46,7 +46,7 @@ class Confirmed_Booking(model.Models):
             table.book()
             super().save(*args, **kwargs)
         else:
-            bookings = Confirmed_Booking.objects.filter(table=table)
+            bookings = Confirmed_Bookings.objects.filter(table=table)
             for booking in bookings:
                 if (self.start_time < booking.end_time and
                     self.start_time > booking.start_time) or (
