@@ -48,6 +48,8 @@
                 </p>
             </div>
         </form>
+    </div>
+    <div>
         <form method="POST" action="{{ confirmed_bookings }}">
             {% csrf_token %}
             {{ form.as_p }}

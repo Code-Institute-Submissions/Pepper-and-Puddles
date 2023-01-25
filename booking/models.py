@@ -56,3 +56,6 @@ class Confirmed_Bookings(models.Model):
                         "Table is already reserved during this time.")
             table.reserve()
             super().save(*args, **kwargs)
+
+        def __str__(self):
+            return self.name

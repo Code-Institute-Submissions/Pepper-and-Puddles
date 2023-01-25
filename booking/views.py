@@ -44,7 +44,7 @@ def confirmed_bookings(request):
     context = {
         'form': form
     }
-    return render(request, 'booking/bookings.html', context)
+    return render(request, 'booking/menu.html', context)
 
 
 def edit_booking(request, booking_id):
