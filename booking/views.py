@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Confirmed_Bookings
-from .forms import BookingForm, BookingConfirmedForm
+from .forms import BookingForm, ConfirmedBookingsForm
 
 # Create your views here.
 

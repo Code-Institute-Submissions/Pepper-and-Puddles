@@ -35,7 +35,7 @@ class Table(models.Model):
             return False
 
 
-class Confirmed_Bookings(models.Models):
+class Confirmed_Bookings(models.Model):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()

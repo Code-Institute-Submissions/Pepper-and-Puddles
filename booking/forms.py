@@ -8,7 +8,7 @@ class BookingForm(forms.ModelForm):
         fields = ['name', 'guests', 'date', 'phone', 'email']
 
 
-class confirmed_bookings(forms.ModelForm):
+class ConfirmedBookingsForm(forms.ModelForm):
     class Meta:
         model = Confirmed_Bookings
         fields = ['table', 'start_time', 'end_time']
