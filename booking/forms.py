@@ -1,5 +1,5 @@
 from django import forms
-from .models import Booking, Confirmed_Bookings, Table
+from .models import Booking, Confirmed_Booking, Table
 
 
 class BookingForm(forms.ModelForm):
@@ -10,7 +10,7 @@ class BookingForm(forms.ModelForm):
 
 class ConfirmedBookingsForm(forms.ModelForm):
     class Meta:
-        model = Confirmed_Bookings
+        model = Confirmed_Booking
         fields = ['table', 'start_time', 'end_time']
 
 

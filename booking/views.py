@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Booking, Confirmed_Bookings
+from .models import Booking, Confirmed_Booking
 from .forms import BookingForm, ConfirmedBookingsForm, AddTable
 
 # Create your views here.
@@ -26,7 +26,7 @@ def make_booking(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('Confirmed_Bookings')
+            return redirect('Confirmed_Booking')
     form = BookingForm()
     context = {
         'form': form
@@ -34,17 +34,17 @@ def make_booking(request):
     return render(request, 'booking/bookings.html', context)
 
 
-def confirmed_bookings(request):
+def confirmed_booking(request):
     if request.method == 'POST':
-        form = ConfirmedBookingsForm(request.POST)
+        form = ConfirmedBookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('Confirmed_Bookings')
-    form = ConfirmedBookingsForm()
+            return redirect('Confirmed_Booking')
+    form = ConfirmedBookingForm()
     context = {
         'form': form
     }
-    return render(request, 'booking/confirmed_bookings.html', context)
+    return render(request, 'booking/confirmed_booking.html', context)
 
 
 def edit_booking(request, booking_id):
@@ -53,7 +53,7 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            return redirect('Confirmed_Bookings')
+            return redirect('Confirmed_Booking')
     form = BookingForm(instance=booking)
     context = {
         'form': form
@@ -64,7 +64,7 @@ def edit_booking(request, booking_id):
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
-    return redirect('Confirmed_Bookings')
+    return redirect('Confirmed_Booking')
 
 # Contact
 
@@ -113,4 +113,4 @@ def edit_table(request, table_id):
 def delete_table(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
-    return redirect('Confirmed_Bookings')
+    return redirect('Confirmed_Booking')
