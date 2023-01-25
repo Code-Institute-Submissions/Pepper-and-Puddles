@@ -5,7 +5,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Booking(models.Model):
-    date = models.DateField()
+    date = models.DateTimeField()
     guests = models.PositiveIntegerField(validators=[MinValueValidator(1),
                                                      MaxValueValidator(16)],
                                          null=True)
