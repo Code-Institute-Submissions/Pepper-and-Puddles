@@ -38,6 +38,9 @@ class Table(models.Model):
         else:
             return False
 
+    def __str__(self):
+        return self.table_id
+
 
 class Confirmed_Booking(models.Model):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
