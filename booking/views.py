@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking, Confirmed_Bookings
-from .forms import BookingForm, ConfirmedBookingsForm
+from .forms import BookingForm, ConfirmedBookingsForm, AddTable
 
 # Create your views here.
 
@@ -40,11 +40,11 @@ def confirmed_bookings(request):
         if form.is_valid():
             form.save()
             return redirect('Confirmed_Bookings')
-    form = BookingConfirmedForm()
+    form = ConfirmedBookingsForm()
     context = {
         'form': form
     }
-    return render(request, 'booking/menu.html', context)
+    return render(request, 'booking/confirmed_bookings.html', context)
 
 
 def edit_booking(request, booking_id):
@@ -81,3 +81,36 @@ def show_bookings(request):
         'bookings': bookings
     }
     return render(request, 'booking/show_bookings.html', context)
+
+
+def add_table(request):
+    if request.method == 'POST':
+        form = AddTable(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('admin_table_management')
+    form = AddTable()
+    context = {
+        'form': form
+    }
+    return render(request, 'booking/admin_table_management.html', context)
+
+
+def edit_table(request, table_id):
+    booking = get_object_or_404(Table, id=table_id)
+    if request.method == 'POST':
+        form = AddTable(request.POST, instance=table)
+        if form.is_valid():
+            form.save()
+            return redirect('Admin_Table_Management')
+    form = AddTable(instance=table)
+    context = {
+        'form': form
+    }
+    return render(request, 'booking/admin_table_management.html', context)
+
+
+def delete_table(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    booking.delete()
+    return redirect('Confirmed_Bookings')

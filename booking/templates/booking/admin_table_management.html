@@ -36,7 +36,38 @@
             </li>
         </ul>
     </div>
-    <h1>Menu 1</h1>
+    <h1>Restaurant Tables</h1>
+    <div>
+        <form method="POST" action="{{ add_table }}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <p>
+                    <button type="submit">Add table</button>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table><p>hello</p>
+            {% for table in tables %}
+                <tr>
+                    <td>{{ table.table_id }}</td>
+                    <td>{{ table.capacity }}</td>
+                    <td>
+                        <a href="/admin_table_management/{{ table.id }}">
+                            <button>Edit</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/delete_table/{{ table.id }}">
+                            <button>Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
     <footer>
         <div class="footer">
           <div>

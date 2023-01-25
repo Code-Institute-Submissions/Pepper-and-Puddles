@@ -25,8 +25,8 @@
                 </a>
             </li>
             <li>
-                <a href="../bookings/">
-                    <button class="dropdown-item" type="button">Bookings</button>
+                <a href="../menus/">
+                    <button class="dropdown-item" type="button">Our Menu</button>
                 </a>
             </li>
             <li>
@@ -36,27 +36,40 @@
             </li>
         </ul>
     </div>
-    <h1>Menu 1</h1>
+    <header>
+<h1>This is the bookings page</h1>
+    <div>
+        <form method="POST" action="{{ confirmed_bookings }}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <p>
+                    <button type="submit">Check times</button>
+                </p>
+            </div>
+        </form>        
+    </div>
+    </header>
     <footer>
         <div class="footer">
-          <div>
-              <a href="../" class="restaurant-logo-footer">P&P</a>
-          </div>
-          <span>
-              <a href="https://www.facebook.com" rel="noopener" aria-label="Facebook" target="_blank">
-              <i class="fab fa-facebook socials"></i>
-              </a>          
-          </span>
-          <span>
-              <a href="https://www.instagram.com" rel="noopener" aria-label="Instagram" target="_blank">
-              <i class="fab fa-instagram socials"></i>
-              </a>
-          </span>
-          <span>
-              <a href="https://www.twitter.com" rel="noopener" aria-label="Twitter" target="_blank">
-              <i class="fab fa-twitter socials"></i>
-              </a>
-          </span>
+            <div>
+                <a href="../" class="restaurant-logo-footer">P&P</a>
+            </div>
+            <span>
+                <a href="https://www.facebook.com" rel="noopener" aria-label="Facebook" target="_blank">
+                <i class="fab fa-facebook footer-icons"></i>
+                </a>          
+            </span>
+            <span>
+                <a href="https://www.instagram.com" rel="noopener" aria-label="Instagram" target="_blank">
+                <i class="fab fa-instagram footer-icons"></i>
+                </a>
+            </span>
+            <span>
+                <a href="https://www.twitter.com" rel="noopener" aria-label="Twitter" target="_blank">
+                <i class="fab fa-twitter footer-icons"></i>
+                </a>
+            </span>
         </div>
-      </footer>
+    </footer>
 </body>

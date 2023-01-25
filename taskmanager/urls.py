@@ -19,11 +19,17 @@ from booking import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bookings/', views.make_booking, name='Bookings'),
+    path('confirmed_bookings/', views.confirmed_bookings,
+         name='ConfirmedBookings'),
+    path('admin_table_management/',
+         views.add_table, name='admin_table_management'),
     path('menus/', views.view_menu, name='Menus'),
     path('contact/', views.contact_us, name='Contact'),
     path('', views.index, name='Home'),
     path('show_bookings/', views.show_bookings, name='Confirmed_Bookings'),
     path('edit/<booking_id>', views.edit_booking, name='edit'),
     path('delete/<booking_id>', views.delete_booking, name='delete'),
+    path('edit/<table_id>', views.edit_table, name='edit_table'),
+    path('delete/<table_id>', views.delete_table, name='delete_table'),
     path('accounts/', include('allauth.urls')),
 ]
