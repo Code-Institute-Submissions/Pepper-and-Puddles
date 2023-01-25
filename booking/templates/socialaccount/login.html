@@ -13,7 +13,7 @@
 
 <p>{% blocktrans with provider.name as provider %}You are about to sign in using a third party account from {{ provider }}.{% endblocktrans %}</p>
 {% endif %}
-
+<p>test</p>
 <form method="post">
   {% csrf_token %}
   <button type="submit">{% trans "Continue" %}</button>

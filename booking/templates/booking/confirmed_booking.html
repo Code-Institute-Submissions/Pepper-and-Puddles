@@ -2,7 +2,7 @@
 {% block content %}
 <h1>This is the bookings page</h1>
     <div>
-        <form method="POST" action="{{ confirmed_bookings }}">
+        <form method="POST" action="{{ confirmed_booking }}">
             {% csrf_token %}
             {{ form.as_p }}
             <div>

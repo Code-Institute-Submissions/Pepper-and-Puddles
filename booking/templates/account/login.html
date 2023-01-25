@@ -1,7 +1,4 @@
-{% extends "base.html" %}
-
-{% load i18n %}
-{% load account socialaccount %}
+{% extends "../booking/base.html" %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
@@ -13,7 +10,7 @@
       <h3>{% trans "Sign In" %}</h3>
 
 <p>{% blocktrans %}Welcome to Pepper and Puddles! 
-  If you're looking to make a bookinf with us, then please 
+  If you're looking to make a booking with us, then please 
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 
     </div>

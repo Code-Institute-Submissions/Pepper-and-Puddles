@@ -40,7 +40,7 @@ class Table(models.Model):
             return False
 
     def __str__(self):
-        
+
         return self.table_no
 
 
