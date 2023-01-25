@@ -18,7 +18,7 @@ class Booking(models.Model):
         return self.name
 
 
-class Table(model.Model):
+class Table(models.Model):
     table_id = models.IntegerField()
     capacity = models.IntegerField()
     available = models.BooleanField(default=True)
@@ -35,7 +35,7 @@ class Table(model.Model):
             return False
 
 
-class Confirmed_Bookings(model.Models):
+class Confirmed_Bookings(models.Models):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
