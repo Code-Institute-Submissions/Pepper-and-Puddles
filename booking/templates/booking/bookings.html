@@ -48,12 +48,12 @@
                 </p>
             </div>
         </form>
-        <form method="POST" action="{{ make_booking }}">
+        <form method="POST" action="{{ confirmed_bookings }}">
             {% csrf_token %}
             {{ form.as_p }}
             <div>
                 <p>
-                    <button type="submit">Check available times</button>
+                    <button type="submit">Check times</button>
                 </p>
             </div>
         </form>

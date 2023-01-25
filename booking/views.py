@@ -36,7 +36,7 @@ def make_booking(request):
 
 def confirmed_bookings(request):
     if request.method == 'POST':
-        form = BookingForm(request.POST)
+        form = ConfirmedBookingsForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('Confirmed_Bookings')
