@@ -19,6 +19,7 @@ class Booking(models.Model):
 
 
 class Table(models.Model):
+    table_no = models.CharField(max_length=2, blank=False, null=True)
     table_id = models.IntegerField(validators=[MinValueValidator(1),
                                                MaxValueValidator(12)],
                                    null=True, unique=True)
@@ -39,7 +40,8 @@ class Table(models.Model):
             return False
 
     def __str__(self):
-        return self.table_id
+        
+        return self.table_no
 
 
 class Confirmed_Booking(models.Model):
