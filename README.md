@@ -224,7 +224,7 @@ Return to the ElephantSQL Dashboard and click "database instance name" for this 
 
 In the project workspace create a env.py file, ensure this is listed in the .gitignore file. In the env.py file write import os. After a blank line type:  os.environ["DATABASE_URL"] = "<copiedURLfromElephanSQL>". This will need a secret key as Django application so beneath the url type:  os.environ["SECRET_KEY"] = "any_secret_key". And save the file.
 
-In settings.py add the followng cod eto the Path import:  import os
+In settings.py add the followng code to the Path import:  import os
  import dj_database_url
  if os.path.isfile('env.py'):
      import env
@@ -286,4 +286,5 @@ In the Heroku Dashboard, click on the Deploy tab, click on the option to Deploy 
 # Credits
 
 Bootstrap
+
 - Dropdown Menu
