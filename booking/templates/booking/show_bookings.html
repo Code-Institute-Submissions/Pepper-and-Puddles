@@ -1,12 +1,23 @@
 {% extends "booking/base.html" %}
 {% block content %}
-<h1>This is the bookings page</h1>
     </header>
-    <h2>Completed Bookings</h2>
+    {% if user.is_superuser %}
+    <h2>Confirmed Bookings</h2>
     <table>
-        {% for booking in bookings %}
+        
             <tr>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Guests</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                {% for booking in bookings %}
                 <td>{{ booking.name }}</td>
+                <td>{{ booking.phone }}</td>
+                <td>{{ booking.email }}</td>
+                <td>{{ booking.guests }}</td>
                 <td>{{ booking.date }}</td>
                 <td>
                     <a href="/edit/{{ booking.id }}">
@@ -21,6 +32,8 @@
             </tr>
         {% endfor %}
     </table>
+
+    {% endif %}
     <footer>
         <div class="footer">
             <div>
@@ -44,3 +57,4 @@
         </div>
     </footer>
 </body>
+{% endblock %}

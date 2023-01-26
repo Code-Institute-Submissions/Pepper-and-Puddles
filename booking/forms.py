@@ -17,4 +17,4 @@ class ConfirmedBookingsForm(forms.ModelForm):
 class AddTable(forms.ModelForm):
     class Meta:
         model = Table
-        fields = ['table_id', 'capacity']
+        fields = ['table_id', 'table_no', 'capacity',]

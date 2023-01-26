@@ -18,6 +18,13 @@
                 <h1 class="brand">Pepper & Puddles</h1>
             </div>
             <div>
+                {% if user.is_superuser %}
+                <div>
+                    <a href="../show_bookings/">
+                        <p>Manage Restaurant Bookings</p>
+                    </a>
+                </div>
+                {% endif %}
                 {% if user.is_authenticated %}
                 <div>
                     <a href="{% url 'account_logout' %}">
@@ -30,15 +37,15 @@
                     </a>                    
                 </div>
                 <div>
-                    {% else %}
+                {% else %}
                     <a href="{% url 'account_login' %}">Log In</a>
                 </div>
                 <div>
                     <a href="{% url 'account_signup' %}">Sign Up</a>
-                    {% endif %}
+                {% endif %}
                 </div>
                 <div class="brand">
-                    <button class="btn .dropdown-menu-end brand" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn .dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-bars hamburger" aria-hidden="true"></i>
                     </button>
                     <ul class="dropdown-menu">
