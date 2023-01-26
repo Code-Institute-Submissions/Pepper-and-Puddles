@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from booking import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
@@ -34,3 +35,5 @@ urlpatterns = [
     path('delete/<table_id>', views.delete_table, name='delete_table'),
     path('accounts/', include('allauth.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

@@ -1,22 +1,6 @@
 {% extends "booking/base.html" %}
 {% block content %}
-  <div class="navbar" id="navbarText">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="../">Home</a>
-      </li>
-      {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-      </li>
-      {% else %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
+<div>
+  {% load static %}<img src="{% static "booking/images/rainy_cafe.jpg" %}" class="outside_cafe" alt="Restaurant front">
+</div>
 {% endblock %}

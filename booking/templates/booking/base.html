@@ -23,7 +23,6 @@
     {% endif %}
 
     <div class="container">
-      <strong>Menu:</strong>
       <ul class="Row">
         {% if user.is_authenticated %}
         <li class="col--bs-teal"><a class="btn --bs-teal" href="{% url 'account_email' %}">Change E-mail</a></li>
@@ -71,7 +70,6 @@
             </li>
         </ul>
     </div>
-    <h3>Hello user</h3>
     {% block content %}
     {% endblock %}
     <footer>
