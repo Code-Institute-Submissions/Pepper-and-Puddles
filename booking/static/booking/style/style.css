@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(144, 140, 199);
+}
+
+#peanut {
+    color: yellow;
+    background-color: aqua;
+}
+.outside_cafe{
+    max-width: 10rem;
+}
+.sign_up{
+    color:brown;
+}

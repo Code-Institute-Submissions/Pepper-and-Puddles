@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pepper & Puddles, Sandwich Cafe">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}<link rel="stylesheet" type="text/css" href="{% static "booking/style.css/style.css"}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/0341233083.js" crossorigin="anonymous"></script>
-    <title>Pepper & Puddles</title>
-  </head>
-  <body>
-    {% if messages %}
-    <div>
-      <strong></strong>
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    <div class="container">
-      <ul class="Row">
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Log In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        {% endif %}
-      </ul>
-    </div>
-    <div class="container">
-        <div class="row col-md-8 offset-md-2">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Pepper & Puddles, Sandwich Cafe">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'booking/style/style.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/0341233083.js" crossorigin="anonymous"></script>
+        <title>Pepper & Puddles</title>
+    </head>
+    <body>
+        {% if messages %}
+        <div>
+        <ul>
             {% for message in messages %}
-            <div class="alert {{ message.tags}} alert-dismissible fade show" id="msg" role="alert">
-            {{ message | safe }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
+            <li>{{message}}</li>
             {% endfor %}
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="btn .dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-bars hamburger" aria-hidden="true"></i>
-        </button>
-        <ul class="dropdown-menu">
-            <li>
-                <a href="../">
-                    <button class="dropdown-item" type="button">Home</button>
-                </a>
-            </li>
-            <li>
-                <a href="../menus/">
-                    <button class="dropdown-item" type="button">Menu</button>
-                </a>
-            </li>
-            <li>
-                <a href="../bookings/">
-                    <button class="dropdown-item" type="button">Bookings</button>
-                </a>
-            </li>
-            <li>
-                <a href="../contact/">
-                    <button class="dropdown-item" type="button">Contact</button>
-                </a>
-            </li>
         </ul>
-    </div>
-    {% block content %}
-    {% endblock %}
-    <footer>
-        <div class="footer">
-            <div>
-                <a href="../" class="restaurant-logo-footer">P&P</a>
-            </div>
-            <span>
-                <a href="https://www.facebook.com" rel="noopener" aria-label="Facebook" target="_blank">
-                <i class="fab fa-facebook-square ms-3"></i>
-                </a>          
-            </span>
-            <span>
-                <a href="https://www.instagram.com" rel="noopener" aria-label="Instagram" target="_blank">
-                <i class="fab fa-instagram-square ms-3"></i>
-                </a>
-            </span>
-            <span>
-                <a href="https://www.twitter.com" rel="noopener" aria-label="Twitter" target="_blank">
-                <i class="fab fa-twitter-square ms-3"></i>
-                </a>
-            </span>
         </div>
-    </footer>
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById("msg");
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 3000);
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        {% endif %}
+
+        <div class="sign_up">
+        <ul class="Row">
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}">Log In</a></li>
+            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+            {% endif %}
+        </ul>
+        </div>
+        <div class="container">
+            <div class="row col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags}} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn .dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-bars hamburger" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="../">
+                        <button class="dropdown-item" type="button">Home</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="../menus/">
+                        <button class="dropdown-item" type="button">Menu</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="../bookings/">
+                        <button class="dropdown-item" type="button">Bookings</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="../contact/">
+                        <button class="dropdown-item" type="button">Contact</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <div class="footer">
+                <div>
+                    <a href="../" class="restaurant-logo-footer">P&P</a>
+                </div>
+                <span>
+                    <a href="https://www.facebook.com" rel="noopener" aria-label="Facebook" target="_blank">
+                    <i class="fab fa-facebook-square ms-3"></i>
+                    </a>          
+                </span>
+                <span>
+                    <a href="https://www.instagram.com" rel="noopener" aria-label="Instagram" target="_blank">
+                    <i class="fab fa-instagram-square ms-3"></i>
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.twitter.com" rel="noopener" aria-label="Twitter" target="_blank">
+                    <i class="fab fa-twitter-square ms-3"></i>
+                    </a>
+                </span>
+            </div>
+        </footer>
+        <script>
+            setTimeout(function () {
+                let messages = document.getElementById("msg");
+                let alert = new bootstrap.Alert(messages);
+                alert.close();
+            }, 3000);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     </body>
 </html>

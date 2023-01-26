@@ -10,3 +10,4 @@ admin.site.register(Table)
 class Confirmed_BookingAdmin(SummernoteModelAdmin):
 
     list_filter = ('table', 'start_time')
+    
