@@ -6,12 +6,13 @@
         <meta name="description" content="Pepper & Puddles, Sandwich Cafe">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'booking/style/style.css' %}">
+        {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'booking/style/style.css/' %}"> 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/0341233083.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
         <title>Pepper & Puddles</title>
     </head>
-    <body>
+    <body class="bod">
         {% if messages %}
         <div>
         <ul>
@@ -23,15 +24,53 @@
         {% endif %}
 
         <div class="sign_up">
-        <ul class="Row">
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
-            {% else %}
-            <li><a href="{% url 'account_login' %}">Log In</a></li>
-            <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-            {% endif %}
-        </ul>
+            <div>
+                <h1 class="brand">Pepper & Puddles</h1>
+            </div>
+            <div>
+                <div>
+                    {% if user.is_authenticated %}
+                    <p>You are logged in</p>                    
+                </div>
+                <div>
+                    <a href="{% url 'account_logout' %}">Log Out</a>                    
+                </div>
+                <div>
+                    {% else %}
+                    <a href="{% url 'account_login' %}">Log In</a>
+                </div>
+                <div>
+                    <a href="{% url 'account_signup' %}">Sign Up</a>
+                    {% endif %}
+                </div>
+                <div class="brand">
+                    <button class="btn .dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-bars hamburger" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="../">
+                                <button class="dropdown-item" type="button">Home</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../menus/">
+                                <button class="dropdown-item" type="button">Menu</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../bookings/">
+                                <button class="dropdown-item" type="button">Bookings</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact/">
+                                <button class="dropdown-item" type="button">Contact</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="container">
             <div class="row col-md-8 offset-md-2">
@@ -42,33 +81,6 @@
                 </div>
                 {% endfor %}
             </div>
-        </div>
-        <div class="dropdown">
-            <button class="btn .dropdown-menu-end" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-bars hamburger" aria-hidden="true"></i>
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="../">
-                        <button class="dropdown-item" type="button">Home</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="../menus/">
-                        <button class="dropdown-item" type="button">Menu</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="../bookings/">
-                        <button class="dropdown-item" type="button">Bookings</button>
-                    </a>
-                </li>
-                <li>
-                    <a href="../contact/">
-                        <button class="dropdown-item" type="button">Contact</button>
-                    </a>
-                </li>
-            </ul>
         </div>
         {% block content %}
         {% endblock %}

@@ -1,8 +1,38 @@
 {% extends "booking/base.html" %}
 {% block content %}
-<div class="outside_cafe">
-  <p id="peanut">Welcome</p>
-  {% load static %}<img src="{% static "booking/images/rainy_cafe.jpg" %}" class="outside_cafe" alt="Restaurant front">
-</div>
+<div class="blurb"> 
+  <div>
+    <h2>welcome to our restaurant</h2>
+    <div>
+      <p>We have been at the heart of the community in Kinsale since 1977.
+        Serving honest, good food, at fair and decent prices for forty-five years.
+        We cater for all special occasions with a bespoke menu for lunch or dinner.
+        Book now to grab your seat, we'll do the rest.
+      </p>
+      {% if user.is_authenticated %}
+      <a href="../bookings/">Book Now</a>                    
+    </div>
+    <div>
+      {% else %}
+      <a href="{% url 'account_login' %}">Log In</a>
+    </div>
+    <div><p> or </p></div>
+    <div>
+      <a href="{% url 'account_signup' %}">Sign Up</a>
+      {% endif %}
+
+    </div>
+    <div>
+      <p>
+        Award Winning Food
+
+        Bib Gourmand
+        2022
+  
+        <em>"Your friendly neighbourhood local"</em><br>
+        - The Foody Times
+      </p>
+    </div>
+  </div> 
 </div>
 {% endblock %}
