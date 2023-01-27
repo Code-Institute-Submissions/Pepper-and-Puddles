@@ -10,14 +10,14 @@
             <form method="POST" action="{{ make_booking }}" style="margin-top: 1.3rem; padding: 5rem;">
                 {{ form | crispy }}
                 {% csrf_token %}
-                {% for message in messages %}
                 <div>
                     <p>
-                        {{ message | safe }}
-                        <button type="submit" style="margin-top: 1rem;">Confirm details</button>
+                        Please enter date field with date time entry in format: (2023-01-23 14:45:00)
+                    </p>
+                    <p>
+                        <button type="submit">Confirm details</button>
                     </p>
                 </div>
-                {% endfor %}
             </form>
         </div>
         {% else %}

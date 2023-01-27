@@ -15,7 +15,7 @@
     flex-flow: row;
     justify-content: space-evenly;
 }
-.sign_up div div a, .link_styling{
+.sign_up div div a, .link_styling, .link_styling_1{
     font-size: 1.4rem;
     color: rgb(187, 122, 176);
     text-decoration: none;
@@ -29,13 +29,14 @@
     text-align: center;
     color: rgb(31, 25, 25);
 }
-.dropdown-menu{
-    color: rgb(14, 104, 182);
-}
 .blurb{
     background-image: url("https://res.cloudinary.com/dwhennrjl/image/upload/v1674746220/RainyCafe_rcdzkj.jpg");
     background-size: 100vw;
     background-repeat:no-repeat;
+}
+.menu{
+    width: 80vw;
+    margin: 10vw;
 }
 .blurb_inner{
     color: rgb(255, 234, 246);
@@ -66,7 +67,6 @@
     padding: 1rem;
 }
 .footer{
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 15vw;
@@ -74,5 +74,6 @@
     display:flex;
     flex-direction: row;
     padding-top: 1rem;
+    position: fixed;
     bottom: 0;
 }

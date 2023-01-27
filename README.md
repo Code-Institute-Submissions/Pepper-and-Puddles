@@ -17,7 +17,7 @@
 
 ## Epics and User Stories
 
-Restaurant Owner Epics
+### Restaurant Owner Epics
 - The site should be able to supply all information the customers could need. It should be laid out clearly and rationally. It should be easy, and enticing, for customers to make bookings. Bookings should be made with sophistacted logic, taking into account the restaurants capacity, opening times/days, and to not double book a table, but to also host multiple sittings per table.
 
 1. USER STORY: Restaurant owner needs to see what bookings have been made
@@ -26,12 +26,11 @@ Restaurant Owner Epics
 4. USER STORY: Customers contact details need to be given to the owner
 5. USER STORY: Passwords, bookings, contact information should all be secure, and not visible to other customers
 
-Customer Epics
+### Customer Epics
 - The site should be clearly laid out, easy to navigate, on any device. I want to see the menu, contact details and location, nearby parking etc. I want to be able to make a booking for any number of people, and to be able to choose a suitable time.
 
 6. USER STORY: The menu, contact details, and location of the restaurant should be present
 7. USER STORY: The site should be easy to understand, navigate and use
-#10 opened 18 hours ago by OisinWrites
 8. USER STORY: Customers need CRUD capability
 9. USER STORY: Customers should be able to find an available booking slot for their party size
 10. USER STORY: Customers should be able to attach a message to their booking for the owner to see
@@ -59,23 +58,6 @@ Below are examples of different approaches to take bookings by real-life restaur
 
 ![calendar_booking](assets/readme_documentation/calendar_booking_example.jpg) ![message_booking](assets/readme_documentation/booking_page_example.jpg)
 
-# Planning Layout
-
-Our website will have several pages. They will be in a specific order based on the customers journey. That journey would look something like welcoming them first, assuring them that we're reliable, inviting them to visit, providing info on how to visit.
-
-1. Homepage
-This will be attractive, to lure the customer in. It will have a navigation bar to allow customers to easily reach the parts of the site that they need. It will have a small blub about the restaurant. Social media links will be included in the footer or header. The restaurants name will be written large.
-
-2. Menu and testimonials
-Before inviting the customer to make a booking we want to advertise our product and service. To instill faith in the viewerr that we are a good restaurant we will include a page with positive reviews from past customers, maybe a link to an article by a food critic, and professionally photographed examples of our dishes. We would also like to include our menu, so that customers know what to expect when they book with us. This would lead to less cancellations, as the customers will be able to tell if they are happy to dine with us.
-
-3. Our bookings page
-
-
-4. Contact Us
-The last page should be details of the location of our premises, as well as any other contact details, address, email address, contact number, and social media links.
-
-## UX/UI
 
 ## Wireframes
 
@@ -86,8 +68,6 @@ The last page should be details of the location of our premises, as well as any 
 
 ![Dropdown_example-mobile](assets/readme_documentation/dropdown_wireframe.jpg)
 
-# Features
-
 # Testing
 
 - Created booking app, tested functionality by using command line "python3 manage.py runserver".
@@ -96,123 +76,6 @@ H1 html text showing in server. App set up successfully.
 - Created Admin by usering createsuperuser command line, verified by signing in following url admin path on open server"
 
 - Form will not create object for booking. Solution: Changed action in form to call on view function, imported redirect to views
-
-## Bug Log
-
-# Deployment
-
-Log into Heroku account. Click "NEW" on the Dashboard, select "Create new app" from the drop-down. Give the app a unique name, and click "Create app" to confirm.
-
-Log into ElephantSQL. Click "Create New Instance" on the Dashboard. Give your new plan a Name, select the Tiny Turtle (free) plan, the Tags field can be left blank. Select Region: EU-West-1 (Ireland). Then click "Review", confirm details, and click "Create instance".
-
-Return to the ElephantSQL Dashboard and click "database instance name" for this project, in the URL section, click the copy icon to copy the database URL.
-
-
-
-# Credits
-
-Bootstrap
-- Dropdown Menu
-# Pepper and Puddles
-
-- This is a restaurant reservation web application using Python with Django, and a Postgres relational database.
-- The site has a model view controller to allow customers to make bookings following CRUD principles, and to give administrative access to the site owner only.
-
-# Site Goals
-
-- The purpose of this site is to allow customers to make bookings in a particular restaurant. 
-- The booking system should employ strong logic and consider real world business needs in order to be an efficient replacement for a manual means of restaurant reservation management.
-- The site should reflect the restaurant and offer a satisfying user experience.
-
-# Agile Development
-
-- This project follow Agile principles and methodologies through assessing the Clear Value Proposition of User Stories
-
-- The User Stories are catalogued using github's issues and projects features. The project is linked to the repository for this project, and set to public, and it should be visible to the assessment panel.
-
-## Epics and User Stories
-
-Restaurant Owner Epics
-- The site should be able to supply all information the customers could need. It should be laid out clearly and rationally. It should be easy, and enticing, for customers to make bookings. Bookings should be made with sophistacted logic, taking into account the restaurants capacity, opening times/days, and to not double book a table, but to also host multiple sittings per table.
-
-1. USER STORY: Restaurant owner needs to see what bookings have been made
-2. USER STORY: Restaurant owner should be able to have full CRUD capability for all bookings
-3. USER STORY: Double bookings should not occur
-4. USER STORY: Customers contact details need to be given to the owner
-5. USER STORY: Passwords, bookings, contact information should all be secure, and not visible to other customers
-
-Customer Epics
-- The site should be clearly laid out, easy to navigate, on any device. I want to see the menu, contact details and location, nearby parking etc. I want to be able to make a booking for any number of people, and to be able to choose a suitable time.
-
-6. USER STORY: The menu, contact details, and location of the restaurant should be present
-7. USER STORY: The site should be easy to understand, navigate and use
-#10 opened 18 hours ago by OisinWrites
-8. USER STORY: Customers need CRUD capability
-9. USER STORY: Customers should be able to find an available booking slot for their party size
-10. USER STORY: Customers should be able to attach a message to their booking for the owner to see
-11. USER STORY: Any of the customers data manipulations should be confirmed with relevant feedback
-
-
-- Making the Reservation functionality
-- I have created a function that requests date, time, name, phone, and, email from the user.
-- On a successful submission, the user should be brought to a confirmation.html page.
-- Missing positional argument of Table ID, perhaps Table ID not yet defined, could work later, removed for now temporarily.
-
-- Additional page is necessary, booking confirmation page added.
-- Additional page, view_bookings, created.
-
-
-- Moved all html files to templates within the booking app. Expect that the site should work from index onwards through the templates.
-
-- Classes successfuly appear in admin panel
-- Two objects have been created in the admin panel for classes of bookings, and have been successfully rendered in a template view.
-
-### Example Sites
-
-- Calendar booking vs Email/Message request
-Below are examples of different approaches to take bookings by real-life restaurants. The first uses a popular booking service provider and has their unifrom set-up. The second is a less sophisticated system that allows the user to supply the restaurant with a message and contact details. The system of booking must be performed by the restaurant owner instead of being managed by the site.
-
-![calendar_booking](assets/readme_documentation/calendar_booking_example.jpg) ![message_booking](assets/readme_documentation/booking_page_example.jpg)
-
-# Planning Layout
-
-Our website will have several pages. They will be in a specific order based on the customers journey. That journey would look something like welcoming them first, assuring them that we're reliable, inviting them to visit, providing info on how to visit.
-
-1. Homepage
-This will be attractive, to lure the customer in. It will have a navigation bar to allow customers to easily reach the parts of the site that they need. It will have a small blub about the restaurant. Social media links will be included in the footer or header. The restaurants name will be written large.
-
-2. Menu and testimonials
-Before inviting the customer to make a booking we want to advertise our product and service. To instill faith in the viewerr that we are a good restaurant we will include a page with positive reviews from past customers, maybe a link to an article by a food critic, and professionally photographed examples of our dishes. We would also like to include our menu, so that customers know what to expect when they book with us. This would lead to less cancellations, as the customers will be able to tell if they are happy to dine with us.
-
-3. Our bookings page
-
-
-4. Contact Us
-The last page should be details of the location of our premises, as well as any other contact details, address, email address, contact number, and social media links.
-
-## UX/UI
-
-## Wireframes
-
-- Homepage for mobile
-
-![Homepage_example_mobile](assets/readme_documentation/homepage_wireframe.jpg)
-- Dropdown menu for mobile
-
-![Dropdown_example-mobile](assets/readme_documentation/dropdown_wireframe.jpg)
-
-# Features
-
-# Testing
-
-- Created booking app, tested functionality by using command line "python3 manage.py runserver".
-H1 html text showing in server. App set up successfully.
-
-- Created Admin by usering createsuperuser command line, verified by signing in following url admin path on open server"
-
-- Form will not create object for booking. Solution: Changed action in form to call on view function, imported redirect to views
-
-## Bug Log
 
 # Deployment
 
@@ -282,9 +145,3 @@ web: gunicorn appname.wsgi
 Save, add, commit, and push the project.
 
 In the Heroku Dashboard, click on the Deploy tab, click on the option to Deploy through Github, this may need to be set up if its your first time. Search your repositories for the project. Scroll to the bottom of the page and select Deploy Branch.
-
-# Credits
-
-Bootstrap
-
-- Dropdown Menu
